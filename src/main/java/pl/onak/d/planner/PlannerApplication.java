@@ -3,8 +3,8 @@ package pl.onak.d.planner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
- * Work planner program implements an application that
- * generates work schedule for employees.
+ * Schedule planner program implements an application that
+ * generates schedule for diffrent applications.
  *
  * @author  Dawid Onak
  * @version 1.0
