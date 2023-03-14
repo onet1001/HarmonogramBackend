@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import pl.onak.d.planner.dto.AddUserRequest;
 import pl.onak.d.planner.exeption.UserExistsException;
 import pl.onak.d.planner.repository.UserRepository;
-import pl.onak.d.planner.user.User;
+import pl.onak.d.planner.entity.User;
 
 import java.util.Optional;
 @Service
@@ -17,7 +17,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public void addUser(AddUserRequest addUserRequest) {
+    public User addUser(AddUserRequest addUserRequest) {
         String email = addUserRequest.getEmail();
         Optional<User> workerByEmail = userRepository.findUserByEmail(email);
         if (workerByEmail.isPresent()){
@@ -28,5 +28,6 @@ public class UserService {
                 .email(addUserRequest.getEmail())
                 .build();
         userRepository.save(user);
+        return user;
     }
 }

@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Schedule planner program implements an application that
- * generates schedule for diffrent applications.
+ * generates schedule for various kinds of tasks.
  *
  * @author  Dawid Onak
  * @version 1.0

@@ -1,4 +1,4 @@
-package pl.onak.d.planner.user;
+package pl.onak.d.planner.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

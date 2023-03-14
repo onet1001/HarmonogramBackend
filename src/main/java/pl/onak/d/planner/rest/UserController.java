@@ -1,9 +1,13 @@
 package pl.onak.d.planner.rest;
 
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.onak.d.planner.dto.AddUserRequest;
 
+import pl.onak.d.planner.entity.User;
+import pl.onak.d.planner.exeption.UserExistsException;
 import pl.onak.d.planner.service.UserService;
 
 @RestController
@@ -17,11 +21,10 @@ public class UserController {
     }
 
     @PostMapping("/create-user")
-    public void registerNewUser(@RequestBody AddUserRequest addUserRequest){
-        userService.addUser(addUserRequest);}
+    public ResponseEntity<Object> registerNewUser(@RequestBody AddUserRequest addUserRequest) {
 
-//    @ExceptionHandler({UserExistsException.class})
-//    public ResponseEntity handleExeption(){
-//        return new ResponseEntity(HttpStatus.NOT_FOUND);
-//    }
+        User result = userService.addUser(addUserRequest);
+        return ResponseHandler.generateResponse("User created succesfully!",HttpStatus.CREATED, result);
+    }
+
 }
