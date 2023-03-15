@@ -3,9 +3,8 @@ package pl.onak.d.planner.dto;
 import lombok.Data;
 
 @Data
-public class AddUserRequest {
+public class CreateUserRequest {
 
     private String name;
     private String email;
-
 }
