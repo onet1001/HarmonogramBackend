@@ -1,9 +1,9 @@
 # HarmonogramBackend
-Backend do aplikacji tworzącej harmonogramy.
+Backend of application which generates schedule.
 
+To run application properly you should create environment variables and 
+fill them with login data to you local database:
 
-Do poprawnego działania aplikacji nalerzy stworzyć zmienne środowiskowe
-oraz wypełnić je danymi logowania do lokalnej bazy danych:
 ```sh
 DATABASE_USERNAME=admin
 DATABASE_PASSWORD=admin

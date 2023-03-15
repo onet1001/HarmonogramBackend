@@ -1,4 +1,4 @@
-package pl.onak.d.planner;
+package pl.onak.d.planner.mappers;
 
 import org.springframework.stereotype.Component;
 import pl.onak.d.planner.dto.CreateUserResponse;
